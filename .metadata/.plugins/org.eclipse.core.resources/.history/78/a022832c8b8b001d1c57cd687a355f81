@@ -1,0 +1,36 @@
+package org.akincengiz.homework;
+
+import java.util.Scanner;
+
+public class PrimeNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PrimeNumber primeNumber = new PrimeNumber();
+		System.out.print("Tamsayi giriniz : ");
+		Scanner input = new Scanner(System.in);
+		int number = input.nextInt();
+		if(primeNumber.isPrime(number))
+		{
+			System.out.print(number + " asal sayidir...");
+		}else {
+			System.out.print(number + " asal sayi degildir...");
+		}
+		
+	}
+	
+	boolean isPrime(int number)
+	{
+		boolean prime = true;
+		for(int i = 2; i <= number/2; i++)
+		{
+			if(number % i == 0)
+			{
+				prime = false;
+				break;
+			}
+		}
+		return prime;
+	}
+
+}
