@@ -1,0 +1,45 @@
+package org.akincengiz.homework;
+
+public class IntegerDivisor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		IntegerDivisor divide = new IntegerDivisor();
+		System.out.print(divide.divisorCount(76));
+		//divide.getDivisor(76);
+
+	}
+	int divisorCount(int number)
+	{
+		int result=0;
+		for(int i = 2; i <= number/2; i++)
+		{
+			if(number % i == 0)
+			{
+				result++;
+			}
+		}
+		return result;
+	}
+	
+	void getDivisor(int number)
+	{
+		int[] divisors = new int[divisorCount(number)];
+		
+		int item = 0;
+		for(int i = 2; i < divisors.length; i++)
+		{
+			if(number % i == 0)
+			{
+				divisors[item]=i;
+				item++;
+				continue;
+			}
+		}
+		for(int i : divisors)
+		{
+			System.out.print(i + "   ");
+		}		
+	}
+
+}

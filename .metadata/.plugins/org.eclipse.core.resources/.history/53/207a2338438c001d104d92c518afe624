@@ -1,0 +1,47 @@
+package org.akincengiz.homework;
+
+public class PrimeMultiplier {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PrimeMultiplier primeMultiplier = new PrimeMultiplier();
+		//System.out.print(primeMultiplier.primeList(1000));
+		for(int item : primeMultiplier.primeList(1000))
+		{
+			System.out.print(item + "   ");
+		}
+
+	}
+	
+
+	
+	int[] primeList(int number)
+	{
+		
+		boolean prime;
+		int counter = 0;
+		int[] primeNumbers = new int[168];
+		for(int i = 2; i <= number; i++)
+		{
+			prime = true;
+			for(int j = 2; j < (int)(Math.sqrt(i)+1); j++)
+			{
+				if(i % j == 0)
+				{
+					prime = false;
+					break;
+				}
+			}
+			
+			if(prime == true)
+			{
+				primeNumbers[counter]=i;
+				counter++;
+			}
+			
+			
+		}
+		return primeNumbers;
+	}
+
+}
