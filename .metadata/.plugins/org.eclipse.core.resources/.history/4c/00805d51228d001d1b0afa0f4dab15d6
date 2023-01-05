@@ -1,0 +1,10 @@
+package org.akincengiz.bookshelf;
+
+public class ReaderTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package org.akincengiz.bookshelf;
+
+public class Reader {
+
+}
