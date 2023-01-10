@@ -7,9 +7,6 @@ public class Student {
 	Department department;
 	Professor advisor;
 	Course[] coursesTaken;
-	{
-		Professor professor = new Professor();
-	}
 	
 	public Student()
 	{

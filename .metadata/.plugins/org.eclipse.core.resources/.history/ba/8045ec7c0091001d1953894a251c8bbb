@@ -9,10 +9,6 @@ public class Professor {
 	Course[] coursesGiven;
 	Student[] advisee;
 	
-	{
-		Department department = new Department();
-	}
-	
 	public Professor()
 	{
 		this(null,null,null,null,null,null,null);
