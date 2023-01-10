@@ -116,15 +116,15 @@ public class Test {
         System.out.println("Name of student student1's first course's professor is " + student1.coursesTaken[1].teacher.name);
         System.out.println("Name of student student1's first course's professor's department is " + student1.coursesTaken[0].teacher.department.name);
         
-        System.out.println("Name of student student1's first course is " + std1.coursesTaken[0].name);
+        System.out.println("\nName of student student1's first course is " + std1.coursesTaken[0].name);
         System.out.println("Name of student student1's first course's professor is " + std1.coursesTaken[0].teacher.name);
         System.out.println("Name of student student1's first course's professor's department is " + std1.coursesTaken[0].teacher.department.name);
         
-        System.out.println("Name of student student1's first course is " + std2.coursesTaken[0].name);
+        System.out.println("\nName of student student1's first course is " + std2.coursesTaken[0].name);
         System.out.println("Name of student student1's first course's professor is " + std2.coursesTaken[0].teacher.name);
         System.out.println("Name of student student1's first course's professor's department is " + std2.coursesTaken[0].teacher.department.name);
         
-        System.out.println("Name of student student1's first course is " + std3.coursesTaken[0].name);
+        System.out.println("\nName of student student1's first course is " + std3.coursesTaken[0].name);
         System.out.println("Name of student student1's first course's professor is " + std3.coursesTaken[0].teacher.name);
         System.out.println("Name of student student1's first course's professor's department is " + std3.coursesTaken[0].teacher.department.name);
 	}

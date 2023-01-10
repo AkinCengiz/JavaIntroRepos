@@ -9,6 +9,22 @@ public class Professor {
 	Course[] coursesGiven;
 	Student[] advisee;
 	
+	public Professor()
+	{
+		this(null,null,null,null,null,null,null);
+	}
+	
+	public Professor(String no, String name, String dateOfBirth, String rank, Department department, Course[] coursesGiven, Student[] advisee)
+	{
+		this.no = no;
+		this.name = name;
+		this.dateOfBirth = dateOfBirth;
+		this.rank = rank;
+		this.department = department;
+		this.coursesGiven = coursesGiven;
+		this.advisee = advisee;
+	}
+	
 	public String getNo() {
 		return no;
 	}

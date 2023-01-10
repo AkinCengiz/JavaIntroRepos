@@ -2,6 +2,14 @@ package org.akincengiz.homework;
 
 public class Circle {
 	
+	public Circle() {
+		radius = 10.0;
+	}
+	public Circle(double radius)
+	{
+		this.radius = radius;
+	}
+	
 	double radius;
 	
 	double circleCircumference()

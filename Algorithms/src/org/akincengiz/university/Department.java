@@ -6,6 +6,18 @@ public class Department {
 	Course[] courses;
 	Student[] students;
 	
+	public Department()
+	{
+		this("",null,null,null);
+	}
+	public Department(String name, Professor head, Course[] courses, Student[] students)
+	{
+		this.name = name;
+		this.head = head;
+		this.courses = courses;
+		this.students = students;
+	}
+	
 	public String getName() {
 		return name;
 	}

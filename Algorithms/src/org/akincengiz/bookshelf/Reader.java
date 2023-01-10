@@ -30,6 +30,29 @@ public class Reader {
 	public void setSex(char sex) {
 		this.sex = sex;
 	}
+	public Reader()
+	{
+		this("",0,'k',null);
+	}
+	public Reader(String name, int age)
+	{
+		this(name, age, 'k', null);
+	}
+	public Reader(String name, char sex)
+	{
+		this(name, 0, sex, null);
+	}
+	public Reader(String name, int age, char sex)
+	{
+		this(name,age,sex,null);
+	}
+	public Reader(String name, int age, char sex, Book reading)
+	{
+		this.name = name;
+		this.age = age;
+		this.sex = sex;
+		this.reading = reading;
+	}
 	
 	void read(Book book)
 	{

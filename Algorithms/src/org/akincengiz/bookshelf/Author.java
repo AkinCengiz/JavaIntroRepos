@@ -10,5 +10,12 @@ public class Author {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+	public Author()
+	{
+		this("");
+	}
+	public Author(String name)
+	{
+		this.name = name;
+	}
 }

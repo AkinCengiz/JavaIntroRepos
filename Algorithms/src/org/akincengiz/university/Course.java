@@ -11,6 +11,20 @@ public class Course {
 	String[] days;
 	Date time;
 	
+	public Course()
+	{
+		this(null,null,null,null,null,null,null);
+	}
+	public Course(String code, String name, Department department, Professor teacher, Student[] students,String[] days, Date time)
+	{
+		this.code = code;
+		this.name = name;
+		this.department = department;
+		this.teacher = teacher;
+		this.students = students;
+		this.days = days;
+		this.time = time;
+	}
 	public String getCode() {
 		return code;
 	}

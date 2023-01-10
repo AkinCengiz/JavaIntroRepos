@@ -8,6 +8,20 @@ public class Student {
 	Professor advisor;
 	Course[] coursesTaken;
 	
+	public Student()
+	{
+		this("","","",null,null,null);
+	}
+	public Student(String no, String name, String dateOfBirth, Department department, Professor advisor, Course[] coursesTaken)
+	{
+		this.no = no;
+		this.name = name;
+		this.dateOfBirth = dateOfBirth;
+		this.department = department;
+		this.advisor = advisor;
+		this.coursesTaken = coursesTaken;
+	}
+	
 	public String getNo() {
 		return no;
 	}

@@ -44,4 +44,18 @@ public class Book {
 	public void setCurrentPage(int currentPage) {
 		this.currentPage = currentPage;
 	}
+	public Book()
+	{
+		this(null,"",0,"",false,0);
+	}
+	
+	public Book(Author author, String title, int page, String type, boolean isHardCover, int currentPage)
+	{
+		this.author = author;
+		this.title = title;
+		this.page = page;
+		this.type = type;
+		this.isHardCover = isHardCover;
+		this.currentPage = currentPage;
+	}
 }
