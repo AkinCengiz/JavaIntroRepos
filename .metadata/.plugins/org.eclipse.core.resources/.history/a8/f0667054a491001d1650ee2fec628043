@@ -66,7 +66,6 @@ public class Reader {
 		System.out.print("\nOkurun cinsiyeti : " + (this.sex == 'e' ? "Erkek" : "Kadin"));
 		System.out.print("\nOkunan kitap     : " + this.reading.title);
 		System.out.print("\nOkunan sayfa     : " + this.reading.currentPage);
-		System.out.print("\nKitabın yazari   : " + this.reading.author.firstName + " " + this.reading.author.lastName);
 		System.out.print("\n********************************************************\n");
 	}
 }

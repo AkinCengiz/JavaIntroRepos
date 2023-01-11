@@ -10,9 +10,9 @@ public class Course {
 	Student[] students;
 	String[] days;
 	Date time;
-//	{
-//		Student student = new Student();
-//	}
+	{
+		Student student = new Student();
+	}
 	
 	public Course()
 	{

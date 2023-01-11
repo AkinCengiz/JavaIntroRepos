@@ -17,10 +17,6 @@ public class Professor {
 	{
 		this(null,null,null,null,null,null,null);
 	}
-	public Professor(String no, String name, String dateOfBirth,String rank)
-	{
-		this(no, name, dateOfBirth, rank,null,null,null);
-	}
 	
 	public Professor(String no, String name, String dateOfBirth, String rank, Department department, Course[] coursesGiven, Student[] advisee)
 	{

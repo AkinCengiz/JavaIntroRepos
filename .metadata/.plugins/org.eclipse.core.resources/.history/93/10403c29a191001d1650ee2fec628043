@@ -7,17 +7,13 @@ public class Student {
 	Department department;
 	Professor advisor;
 	Course[] coursesTaken;
-//	{
-//		Professor professor = new Professor();
-//	}
+	{
+		Professor professor = new Professor();
+	}
 	
 	public Student()
 	{
 		this("","","",null,null,null);
-	}
-	public Student(String no, String name, String dateOfBirth)
-	{
-		this(no,name,dateOfBirth,null,null,null);
 	}
 	public Student(String no, String name, String dateOfBirth, Department department, Professor advisor, Course[] coursesTaken)
 	{

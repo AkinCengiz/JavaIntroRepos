@@ -48,10 +48,6 @@ public class Book {
 	{
 		this(null,"",0,"",false,0);
 	}
-	public Book(Author author, String title,String type)
-	{
-		this(author, title, 0, type,false,0);
-	}
 	
 	public Book(Author author, String title, int page, String type, boolean isHardCover, int currentPage)
 	{

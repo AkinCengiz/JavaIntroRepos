@@ -6,12 +6,10 @@ public class ReaderTest {
 		// TODO Auto-generated method stub
 		
 		Author author = new Author();
-		author.firstName = "Victor";
-		author.lastName = "HUGO";
+		author.name = "Victor HUGO";
 		
 		Author author2 = new Author();
-		author2.firstName = "Oguz";
-		author2.lastName = "ATAY";
+		author2.name = "Oguz ATAY";
 		
 		Book book = new Book();
 		book.author = author2;

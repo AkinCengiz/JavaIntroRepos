@@ -10,10 +10,6 @@ public class Department {
 	{
 		this("",null,null,null);
 	}
-	public Department(String name)
-	{
-		this(name, null, null, null);
-	}
 	public Department(String name, Professor head, Course[] courses, Student[] students)
 	{
 		this.name = name;
