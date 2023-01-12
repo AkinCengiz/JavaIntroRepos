@@ -6,44 +6,44 @@ public class ReaderTest {
 		// TODO Auto-generated method stub
 		
 		Author author = new Author();
-		author.firstName = "Victor";
-		author.lastName = "HUGO";
+		author.setFirstName("Victor");
+		author.setLastName("HUGO");
 		
 		Author author2 = new Author();
-		author2.firstName = "Oguz";
-		author2.lastName = "ATAY";
+		author2.setFirstName("Oguz");
+		author2.setLastName("ATAY");
 		
 		Book book = new Book();
-		book.author = author2;
-		book.currentPage = 0;
-		book.isHardCover = true;
-		book.page = 480;
-		book.title = "Tutunamayanlar";
-		book.type = "Roman";
+		book.setAuthor(author2);
+		book.setCurrentPage(0);
+		book.setHardCover(true);
+		book.setPage(480);
+		book.setTitle("Tutunamayanlar");
+		book.setTitle("Roman");
 		
 		Book book2 = new Book();
-		book2.author = author;
-		book2.currentPage = 0;
-		book2.isHardCover = true;
-		book2.page = 632;
-		book2.title = "Sefiller";
-		book2.type = "Roman";
+		book2.setAuthor(author);
+		book2.setCurrentPage(0);
+		book2.setHardCover(true);
+		book2.setPage(632);
+		book2.setTitle("Sefiller");
+		book2.setType("Roman");
 		
 		Reader reader = new Reader();
-		reader.name = "Akin CENGIZ";
-		reader.age = 41;
-		reader.sex = 'e';
-		reader.reading = book2;
+		reader.setName("Akin CENGIZ");
+		reader.setAge(41);
+		reader.setSex('e');
+		reader.setReading(book2);
 		
 		Reader reader2 = new Reader();
-		reader2.name = "Serap CENGIZ";
-		reader2.age = 44;
-		reader2.sex = 'k';
-		reader2.reading = book;
+		reader2.setName("Serap CENGIZ");
+		reader2.setAge(44);
+		reader2.setSex('k');
+		reader2.setReading(book);
 		
-		reader.read(reader.reading);
-		reader.read(reader.reading);
-		reader2.read(reader2.reading);
+		reader.read(reader.getReading());
+		reader.read(reader.getReading());
+		reader2.read(reader2.getReading());
 		
 		
 		

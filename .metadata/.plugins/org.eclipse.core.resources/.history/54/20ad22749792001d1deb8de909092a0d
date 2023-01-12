@@ -1,0 +1,5 @@
+package org.akincengiz.bank;
+
+class Account {
+
+}

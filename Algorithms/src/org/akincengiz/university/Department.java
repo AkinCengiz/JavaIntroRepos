@@ -1,25 +1,32 @@
 package org.akincengiz.university;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Department {
-	String name;
-	Professor head;
-	Course[] courses;
-	Student[] students;
+	private String name;
+	private Professor head;
+	private List<Course> courses;
+	private List<Student> students;	
+	{
+		courses = new ArrayList<Course>();
+		students = new ArrayList<Student>();
+	}
 	
 	public Department()
 	{
-		this("",null,null,null);
+		this(null,null,null,null);
 	}
 	public Department(String name)
 	{
 		this(name, null, null, null);
 	}
-	public Department(String name, Professor head, Course[] courses, Student[] students)
+	public Department(String name, Professor head, Course course, Student student)
 	{
 		this.name = name;
 		this.head = head;
-		this.courses = courses;
-		this.students = students;
+		this.courses.add(course);
+		this.students.add(student);
 	}
 	
 	public String getName() {
@@ -34,16 +41,17 @@ public class Department {
 	public void setHead(Professor head) {
 		this.head = head;
 	}
-	public Course[] getCourses() {
+	public List<Course> getCourses() {
 		return courses;
 	}
-	public void setCourses(Course[] courses) {
-		this.courses = courses;
+	public void setCourses(Course course) {
+		this.courses.add(course);
 	}
-	public Student[] getStudents() {
+	public List<Student> getStudents() {
 		return students;
 	}
-	public void setStudents(Student[] students) {
-		this.students = students;
+	public void setStudents(Student student) {
+		this.students.add(student);
 	}
+	
 }

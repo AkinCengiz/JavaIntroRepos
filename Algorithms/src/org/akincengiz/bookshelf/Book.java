@@ -1,12 +1,12 @@
 package org.akincengiz.bookshelf;
 
 public class Book {
-	Author author;
-	String title;
-	int page;
-	String type;
-	boolean isHardCover;
-	int currentPage;
+	private Author author;
+	private String title;
+	private int page;
+	private String type;
+	private boolean isHardCover;
+	private int currentPage;
 	
 	public Author getAuthor() {
 		return author;

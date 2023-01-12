@@ -1,8 +1,8 @@
 package org.akincengiz.bookshelf;
 
 public class Author {
-	String firstName;
-	String lastName;
+	private String firstName;
+	private String lastName;
 
 	public String getLastName() {
 		return lastName;

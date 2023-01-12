@@ -1,31 +1,43 @@
 package org.akincengiz.university;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Course {
-	String code;
-	String name;
-	Department department;
-	Professor teacher;
-	Student[] students;
-	String[] days;
-	Date time;
-//	{
-//		Student student = new Student();
-//	}
+	private String code;
+	private String name;
+	private Department department;
+	private Professor teacher;
+	private List<Student> students;
+	private String day;
+	private Date time;
+	private static String[] days;
+	
+	{		
+		students = new ArrayList<Student>();
+	}
+	static {
+		days = new String[5];
+		days[0] = "Monday";
+		days[1] = "Tuesday";
+		days[2] = "Wednesday";
+		days[3] = "Thursday";
+		days[4] = "Friday";
+	}
 	
 	public Course()
 	{
-		this(null,null,null,null,null,null,null);
+		this(null,null,null,null,null,0,null);
 	}
-	public Course(String code, String name, Department department, Professor teacher, Student[] students,String[] days, Date time)
+	public Course(String code, String name, Department department, Professor teacher, Student student,int day, Date time)
 	{
 		this.code = code;
 		this.name = name;
 		this.department = department;
 		this.teacher = teacher;
-		this.students = students;
-		this.days = days;
+		this.students.add(student);
+		this.day = days[day];
 		this.time = time;
 	}
 	public String getCode() {
@@ -52,17 +64,17 @@ public class Course {
 	public void setTeacher(Professor teacher) {
 		this.teacher = teacher;
 	}
-	public Student[] getStudents() {
+	public List<Student> getStudents() {
 		return students;
 	}
-	public void setStudents(Student[] students) {
-		this.students = students;
+	public void setStudents(Student student) {
+		this.students.add(student);
 	}
-	public String[] getDays() {
-		return days;
+	public String getDay() {
+		return day;
 	}
-	public void setDays(String[] days) {
-		this.days = days;
+	public void setDay(String day) {
+		this.day = day;
 	}
 	public Date getTime() {
 		return time;

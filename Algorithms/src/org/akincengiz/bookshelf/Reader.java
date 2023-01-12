@@ -1,10 +1,10 @@
 package org.akincengiz.bookshelf;
 
 public class Reader {
-	String name;
-	int age;
-	char sex;
-	Book reading;
+	private String name;
+	private int age;
+	private char sex;
+	private Book reading;
 	
 	public Book getReading() {
 		return reading;
@@ -56,7 +56,8 @@ public class Reader {
 	
 	void read(Book book)
 	{
-		book.currentPage += 50;
+		int read = book.getCurrentPage()+50;
+		book.setCurrentPage(read);
 	}
 	
 	void getReader()
@@ -64,9 +65,9 @@ public class Reader {
 		System.out.print("\nOkurun adi       : " + this.name);
 		System.out.print("\nOkurun yasi      : " + this.age);
 		System.out.print("\nOkurun cinsiyeti : " + (this.sex == 'e' ? "Erkek" : "Kadin"));
-		System.out.print("\nOkunan kitap     : " + this.reading.title);
-		System.out.print("\nOkunan sayfa     : " + this.reading.currentPage);
-		System.out.print("\nKitabın yazari   : " + this.reading.author.firstName + " " + this.reading.author.lastName);
+		System.out.print("\nOkunan kitap     : " + this.reading.getTitle());
+		System.out.print("\nOkunan sayfa     : " + this.reading.getCurrentPage());
+		System.out.print("\nKitabın yazari   : " + this.reading.getAuthor().getFirstName() + " " + this.reading.getAuthor().getLastName());
 		System.out.print("\n********************************************************\n");
 	}
 }

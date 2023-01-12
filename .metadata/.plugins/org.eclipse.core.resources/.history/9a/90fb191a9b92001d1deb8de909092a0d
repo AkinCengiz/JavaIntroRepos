@@ -1,0 +1,15 @@
+package org.akincengiz.bank;
+
+
+
+public class AccountTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Account account1 = new Account(125000.0);
+		Account account2 = new Account();		
+		AccountClient.moneyOrder(account1, account2, 27500);
+		
+		System.out.print("Account1 hesabında kalan bakiye : "+account1.getBalance()+" TL");
+	}
+}

@@ -3,11 +3,13 @@ package org.akincengiz.university;
 public class Test {
 
 	public static void main(String[] args) {
+		
+		
 		// TODO Auto-generated method stub
 		Department department1 = new Department();
-		department1.name = "Software Engineering";
+		department1.setName("Software Engineering");
 		Department department2 = new Department();
-		department2.name = "Philosophy";
+		department2.setName("Philosophy");
 		
 		Professor professor1 = new Professor();
 		professor1.name="Hasan YILMAZ";
@@ -17,11 +19,11 @@ public class Test {
 		prof3.name = "Ayse FATMA";
 		
 		Course course1 = new Course();
-		course1.name = "Intro to Software Engineering";
+		course1.setName("Intro to Software Engineering");
 		Course course2 = new Course();
-		course2.name = "Ethics";
+		course2.setName("Ethics");
 		Course course3 = new Course();
-		course3.name = "Ontology";
+		course3.setName("Ontology");
 		
 		Student student1 = new Student();
 		student1.name="Mina YITER";
@@ -33,36 +35,33 @@ public class Test {
 		std3.name = "Murat ATILGAN";
 		
 		//Department with Professor 
-		department1.head=professor1;
+		department1.setHead(professor1);
 		professor1.department= department1;
 		
-		department2.head = prof2;
+		department2.setHead(prof2);
 		prof2.department = department2;
 		prof3.department = department2;
 		
 		
 		// Department of Int. to Software Engineering course is Software Engineering and consequently the course
         // Int. to Software Engineering belongs to Software Engineering department.
-		course1.department=department1;
-		department1.courses = new Course[100];
-		department1.courses[0]= course1;
 		
-		course2.department = department1;
-		department1.courses[1] = course2;
-		
-		course3.department = department2;
-		department2.courses = new Course[100];
-		department2.courses[0] = course3;
-		
-		course1.teacher = professor1;
+		course1.setDepartment(department1);
+		department1.setCourses(course1);
+		course2.setDepartment(department1);
+		department1.setCourses(course2);		
+		course3.setDepartment(department2);
+		department2.setCourses(course3);
+
+		course1.setTeacher(professor1);
 		professor1.coursesGiven=new Course[5];
 		professor1.coursesGiven[0]= course1;
-		
-		course2.teacher = prof2;
+
+		course2.setTeacher(prof2);
 		prof2.coursesGiven = new Course[5];
 		prof2.coursesGiven[0]= course2;
-		
-		course3.teacher = prof3;
+
+		course3.setTeacher(prof3);
 		prof3.coursesGiven= new Course[5];
 		prof3.coursesGiven[0]=course3;
 		
@@ -94,39 +93,41 @@ public class Test {
 		std3.coursesTaken[0] = course1;
 		std3.coursesTaken[1] = course2;
 		std3.coursesTaken[2] = course3;
+
 		
+		course1.setStudents(student1);
+		course1.setStudents(std2);
+		course1.setStudents(std3);
+		course2.setStudents(student1);
+		course2.setStudents(std1);
+		course2.setStudents(std2);
+		course2.setStudents(std3);
+		course3.setStudents(std1);
+		course3.setStudents(std2);
+		course3.setStudents(std3);
 		
-		course1.students = new Student[100];
-		course1.students[0] = student1;
-		course1.students[1] = std2;
-		course1.students[2] = std3;
-		course2.students = new Student[100];
-		course2.students[0] = student1;
-		course2.students[1] = std1;
-		course2.students[2] = std2;
-		course2.students[3] = std3;
-		course3.students = new Student[100];
-		course3.students[0] = std1;
-		course3.students[1] = std2;
-		course3.students[2] = std3;
+		System.out.println("Name of student student1's first course is " + student1.getAdvisor().name);
+		System.out.println("Name of student student1's first course is " + student1.getName());
+		System.out.println("Name of student student1's first course is " + student1.getCoursesTaken()[0].getName());
+		System.out.println("Name of student student1's first course is " + student1.getCoursesTaken()[0].getTeacher().name);
+		System.out.println("Name of student student1's first course is " + student1.getCoursesTaken()[1].getName());
+		System.out.println("Name of student student1's first course is " + student1.getCoursesTaken()[1].getTeacher().name);
 		
-		System.out.println("Name of student student1's first course is " + student1.coursesTaken[0].name);
-		System.out.println("Name of student student1's first course is " + student1.coursesTaken[1].name);
-        System.out.println("Name of student student1's first course's professor is " + student1.coursesTaken[0].teacher.name);
-        System.out.println("Name of student student1's first course's professor is " + student1.coursesTaken[1].teacher.name);
-        System.out.println("Name of student student1's first course's professor's department is " + student1.coursesTaken[0].teacher.department.name);
+        System.out.println("Name of student student1's first course's professor is " + student1.getCoursesTaken() + " " + student1.getAdvisor());
+        System.out.println("Name of student student1's first course's professor is " + student1.getCoursesTaken()[1].getTeacher().name);
+        System.out.println("Name of student student1's first course's professor's department is " + student1.getCoursesTaken()[0].getTeacher().getDepartment().getName());
         
-        System.out.println("\nName of student student1's first course is " + std1.coursesTaken[0].name);
-        System.out.println("Name of student student1's first course's professor is " + std1.coursesTaken[0].teacher.name);
-        System.out.println("Name of student student1's first course's professor's department is " + std1.coursesTaken[0].teacher.department.name);
+        System.out.println("\nName of student student1's first course is " + std1.getCoursesTaken()[0].getName());
+        System.out.println("Name of student student1's first course's professor is " + std1.getCoursesTaken()[0].getTeacher().name);
+        System.out.println("Name of student student1's first course's professor's department is " + std1.getCoursesTaken()[0].getTeacher().getDepartment().getName());
         
-        System.out.println("\nName of student student1's first course is " + std2.coursesTaken[0].name);
-        System.out.println("Name of student student1's first course's professor is " + std2.coursesTaken[0].teacher.name);
-        System.out.println("Name of student student1's first course's professor's department is " + std2.coursesTaken[0].teacher.department.name);
+        System.out.println("\nName of student student1's first course is " + std2.getCoursesTaken()[0].getName());
+        System.out.println("Name of student student1's first course's professor is " + std2.getCoursesTaken()[0].getTeacher().name);
+        System.out.println("Name of student student1's first course's professor's department is " + std2.getCoursesTaken()[0].getTeacher().getDepartment().getName());
         
-        System.out.println("\nName of student student1's first course is " + std3.coursesTaken[0].name);
-        System.out.println("Name of student student1's first course's professor is " + std3.coursesTaken[0].teacher.name);
-        System.out.println("Name of student student1's first course's professor's department is " + std3.coursesTaken[0].teacher.department.name);
+        System.out.println("\nName of student student1's first course is " + std3.getCoursesTaken()[0].getName());
+        System.out.println("Name of student student1's first course's professor is " + std3.getCoursesTaken()[0].getTeacher().name);
+        System.out.println("Name of student student1's first course's professor's department is " + std3.getCoursesTaken()[0].getTeacher().getDepartment().getName());
 	}
 
 }
