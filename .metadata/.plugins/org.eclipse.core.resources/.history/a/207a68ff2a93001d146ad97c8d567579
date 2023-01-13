@@ -1,0 +1,17 @@
+package org.akincengiz.composition;
+
+public class CarTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Car car = new Car("Ford","Mustang","2022",2);
+		car.start();
+		car.go(150);
+		car.accelerate(100);
+		car.accelerate(20);
+		car.accelerate(-70);
+		car.stop();
+		car.turnOff();
+	}
+
+}
