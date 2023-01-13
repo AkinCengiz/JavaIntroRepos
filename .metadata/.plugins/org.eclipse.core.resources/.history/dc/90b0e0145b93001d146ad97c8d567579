@@ -1,0 +1,10 @@
+package org.akincengiz.physics;
+
+public class PotentialAndKineticEnergy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
