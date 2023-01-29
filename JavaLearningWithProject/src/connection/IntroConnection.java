@@ -22,13 +22,44 @@ public class IntroConnection {
 		PreparedStatement statement = null;
 		ResultSet  resultSet = null;
 		String sentence = "insert into TblOgrenciler values ('Hasan','Yilmaz',75,85)";
-		String sentence2 = "update TblOgrenciler set OgrenciAdi='Ugur', OgrenciSoyadi='Arslan', Not1 = 95, Not2 = 98 where OgrenciNo = 9";
+		String sentence2 = "update TblOgrenciler set OgrenciAdi='Ugur', OgrenciSoyadi='Arslan', Not1 = 96, Not2 = 98 where OgrenciNo = 9";
+		String sentence3 = "delete from TblOgrenciler where OgrenciNo=10";
 		
 		
 		getRecord(connection, dbUrl, user, pass, statement, resultSet);
-		addStudent(connection, dbUrl, user, pass, statement, sentence);
+		//addStudent(connection, dbUrl, user, pass, statement, sentence);
 		updateStudent(connection, dbUrl, user, pass, statement, sentence2);
+		deleteStudent(connection, dbUrl, user, pass, statement, sentence3);
 		getRecord(connection, dbUrl, user, pass, statement, resultSet);
+	}
+	
+	private static void deleteStudent(Connection connection, String dbUrl, String user, String pass,PreparedStatement statement,String sentence)
+	{
+		try {
+			connection = DriverManager.getConnection(dbUrl,user,pass);
+			System.out.println("Veritabanina baglanildi...");
+			
+			statement = connection.prepareStatement(sentence);
+			int n = statement.executeUpdate();
+			
+			} catch (Exception e) {
+				System.out.println("Veri silinirken hata meydana geldi...");
+				e.printStackTrace();
+			}finally {
+				try {
+					if(statement != null)
+					{
+						statement.close();
+					}
+					if(connection != null)
+					{
+						connection.close();
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+					e.printStackTrace();
+				}
+			}
 	}
 	
 	private static void updateStudent(Connection connection, String dbUrl, String user, String pass,PreparedStatement statement,String sentence)
@@ -55,6 +86,7 @@ public class IntroConnection {
 				}
 			} catch (Exception e2) {
 				// TODO: handle exception
+				e2.printStackTrace();
 			}
 		}
 		
@@ -85,6 +117,7 @@ public class IntroConnection {
 				}
 			} catch (Exception e) {
 				// TODO: handle exception
+				e.printStackTrace();
 			}
 		}
 	}
