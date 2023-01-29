@@ -18,11 +18,12 @@ public class Queue {
 		}
 
 		private void rearrange() {
-			
+			System.out.println();
 		}
 
 		// Remove all elements from queue
 		public void clear() {
+			rearrange();
 		}
 
 		// Queue status operations
