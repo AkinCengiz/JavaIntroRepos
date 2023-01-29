@@ -5,6 +5,7 @@
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
 	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\Users\akinc\eclipse-workspace\JavaWithOOPIntroduction"/>
 	<item key="SortMembers.sort_all" value="false"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="E:\JDBC-Driver\sqljdbc_11.2.3.0_enu\sqljdbc_11.2\enu"/>
 	<list key="workingset_selection_history">
 		<item value="JavaExam"/>
 	</list>
@@ -100,5 +101,20 @@
 		<item key="GenerateJavadoc" value="false"/>
 	</section>
 	<section name="RenameInformationPopup">
+	</section>
+	<section name="GenerateConstructorUsingFieldsSelectionDialog">
+		<item key="OmitCallToSuper" value="false"/>
+	</section>
+	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="710"/>
+		<item key="DIALOG_Y_ORIGIN" value="81"/>
+		<item key="DIALOG_WIDTH" value="517"/>
+		<item key="DIALOG_HEIGHT" value="678"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="ExtractMethodWizard">
+		<item key="ThrowRuntimeExceptions" value="false"/>
+		<item key="GenerateJavadoc" value="false"/>
+		<item key="AccessModifier" value="2"/>
 	</section>
 </section>
